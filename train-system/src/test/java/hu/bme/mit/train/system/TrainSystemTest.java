@@ -55,7 +55,5 @@ public class TrainSystemTest {
 	{
 		int valami = 5;
 		Assert.assertEquals(5, valami);
-	}
-
-	
+	}	
 }
