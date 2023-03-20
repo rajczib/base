@@ -6,13 +6,16 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
+import hu.bme.mit.train.interfaces.TrainButton;
+import hu.bme.mit.train.button.TrainButtonImpl;
 
 public class TrainSystem {
 
 	private TrainController controller = new TrainControllerImpl();
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
-
+	private TrainButton button = new TrainButtonImpl(sensor);
+	private int valami;
 	public TrainController getController() {
 		return controller;
 	}
@@ -23,6 +26,11 @@ public class TrainSystem {
 
 	public TrainUser getUser() {
 		return user;
+	}
+
+	public TrainButton getButton()
+	{
+		return button;
 	}
 
 }
