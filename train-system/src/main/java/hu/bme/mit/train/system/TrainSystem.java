@@ -16,6 +16,7 @@ public class TrainSystem {
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 	private TrainButton button = new TrainButtonImpl(sensor);
 	private int valami;
+
 	public TrainController getController() {
 		return controller;
 	}
